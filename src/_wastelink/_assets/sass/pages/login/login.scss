@@ -1,0 +1,124 @@
+@import "../../init";
+@import "../common/button_style";
+
+.login-form {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .signUp_main {
+    margin: 30px 0px;
+  }
+  .login_main,
+  .signUp_main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    h2 {
+      margin-bottom: 2%;
+      color: #67666e;
+    }
+
+    .alert_message {
+      height: 40px;
+      margin-bottom: 2%;
+    }
+
+    .ant-form {
+      width: 100%;
+      ._button {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px 0px;
+        margin-top: 10px;
+
+        button {
+          @include done-button;
+        }
+      }
+
+      .password_row,
+      .signin_link_row {
+        .ant-form-item {
+          margin-bottom: 5px !important;
+        }
+        .signUp_link,
+        .signIn_link {
+          margin-left: 10px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          a {
+            font-weight: 500;
+            margin-left: 4px;
+          }
+        }
+      }
+    }
+
+    .row-or {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 25px 0px;
+      .span_1,
+      .span_2 {
+        width: 100%;
+        height: 1px;
+        flex: 1;
+        background: #ebecf1;
+        display: flex;
+      }
+
+      .text_or {
+        margin: 0px 15px;
+      }
+    }
+
+    .signInWithGoogle {
+      width: 100%;
+
+      .ant-btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .login-form {
+    .login_main {
+      padding-top: 5%;
+      padding-bottom: 5%;
+      width: 55%;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .login-form {
+    .login_main {
+      width: 70%;
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .login-form {
+    .login_main {
+      width: 90%;
+    }
+  }
+}

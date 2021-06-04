@@ -1,0 +1,87 @@
+@import "../common/button_style";
+
+.attendanceTable {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background: white;
+  box-shadow: 0 0 6px 0 rgba(183, 192, 206, 0.6);
+
+  .expBtn {
+    button {
+      @include done-button;
+    }
+  }
+
+  .tableTop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+
+    .con1 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .currMonth {
+        font-weight: 500;
+      }
+
+      .datePick {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  table {
+    width: 1500px;
+    max-width: 1500px;
+    thead {
+      tr {
+        th {
+          text-align: center;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          width: 40px;
+          vertical-align: middle;
+          text-align: center;
+          .time {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .brBtm {
+              border-bottom: 1px solid #ccc;
+            }
+
+            .absent {
+              color: red;
+              font-weight: 500;
+              font-size: 1.1em;
+            }
+
+            .weekend {
+              color: #ffb229;
+              font-weight: 600;
+            }
+          }
+        }
+
+        td:first-child {
+          width: 150px;
+          cursor: pointer;
+
+          &:hover {
+            color: #05e;
+          }
+        }
+      }
+    }
+  }
+}

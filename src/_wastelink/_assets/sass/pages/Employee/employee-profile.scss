@@ -1,0 +1,78 @@
+.employeeProfile {
+  padding: 15px;
+  background: white;
+  box-shadow: 0 0 6px 0 rgba(183, 192, 206, 0.6);
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border: 1px solid #dcdfe8;
+    box-shadow: none;
+    padding: 15px;
+
+    .empImg {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 15px;
+      ._emp {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+
+        ._name {
+          color: #110a57;
+          word-wrap: break-word;
+          font-weight: 600;
+          font-size: 1.44em;
+          margin-bottom: 0.1em;
+        }
+        ._role {
+          font-size: 1.2em;
+          word-wrap: break-word;
+          font-weight: 500;
+          color: #676e8a;
+        }
+      }
+    }
+
+    ul {
+      color: #676e8a;
+      font-size: 1.25em;
+
+      .downloadID {
+        margin-top: 10px;
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 0.85em;
+        }
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border: 1px solid #dcdfe8;
+    box-shadow: none;
+    padding: 0px 15px 15px 15px;
+
+    ._dt {
+      ._tit {
+        color: #676e8a;
+        font-size: 0.85em;
+        margin-bottom: -4px !important;
+      }
+      ._val {
+        color: #110a57;
+        font-size: 1.05em;
+        font-weight: 500;
+      }
+    }
+  }
+}

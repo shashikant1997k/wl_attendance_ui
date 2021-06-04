@@ -1,0 +1,12 @@
+@import "../../../../init";
+@import "../../table-content";
+
+@import "./show-invoice";
+@import "./billing-details";
+@import "./add-invoice";
+
+.billingIndex {
+  .ant-tabs-content-holder {
+    padding: 0px 15px;
+  }
+}

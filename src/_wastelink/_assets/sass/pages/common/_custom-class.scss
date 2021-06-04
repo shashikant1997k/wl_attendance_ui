@@ -1,0 +1,27 @@
+@import "../../init";
+
+.pd-l-0 {
+  padding-left: 0px !important;
+}
+.pd-r-0 {
+  padding-right: 0px !important;
+}
+
+.mg-l-0 {
+  margin-left: 0px !important;
+}
+
+.mg-r-0 {
+  margin-right: 0px !important;
+}
+
+@include media-breakpoint-down(md) {
+  .pd-mob-0 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .mg-mob-0 {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+}

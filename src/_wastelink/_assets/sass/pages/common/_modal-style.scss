@@ -1,0 +1,22 @@
+@mixin modal-style {
+  .ant-modal-content {
+    .ant-modal-footer {
+      border-top: none !important;
+    }
+
+    .ant-modal-header {
+      border-bottom: none !important;
+    }
+
+    .ant-modal-body {
+      .footer__button {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 10px;
+        .ant-btn {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

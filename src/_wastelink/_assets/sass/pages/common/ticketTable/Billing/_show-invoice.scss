@@ -1,0 +1,64 @@
+@mixin customTable {
+  .ant-table-content {
+    font-size: 13px;
+    font-weight: 500;
+    @include table-horizonta-scroll;
+
+    table {
+      width: max-content !important;
+      min-width: 100% !important;
+    }
+    .ant-table-thead {
+      tr {
+        th {
+          //   background: #f2f3f8 !important;
+          border-bottom: 1px solid #f2f3f8 !important;
+          padding: 8px 16px !important;
+          font-weight: 700;
+        }
+      }
+    }
+    .ant-table-tbody {
+      tr.ant-table-row {
+        td {
+          padding: 8px 16px !important;
+        }
+      }
+    }
+  }
+}
+.showInvoice {
+  .invoiceMainTable {
+    @include customTable;
+
+    .billingDetailsTable {
+      .ant-table {
+        background: aliceblue;
+        .ant-table-thead {
+          tr {
+            th {
+              background-color: aqua;
+            }
+          }
+        }
+      }
+
+      @include customTable;
+
+      .itemsTable {
+        .ant-table {
+          background: floralwhite;
+          .ant-table-thead {
+            tr {
+              th {
+                background-color: antiquewhite;
+              }
+            }
+          }
+        }
+
+        @include customTable;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import "../../../../init";
+@import "../../table-content";
+
+.addInvoice {
+  .invoiceForm {
+    display: flex;
+    flex-direction: row;
+    background: white;
+    padding: 5px 0px 15px 0px;
+    margin-bottom: 12px;
+    box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.4);
+
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      flex: 0.35;
+      padding: 0px 12px;
+
+      label {
+        font-weight: 600;
+        margin-bottom: 0.1rem;
+      }
+    }
+  }
+
+  .invoiceTableDiv {
+    background: white;
+    padding: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.4);
+
+    .invoiceTable {
+      @include ant-table-custom2;
+    }
+  }
+}

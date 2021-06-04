@@ -1,0 +1,34 @@
+//
+// Content
+//
+
+.footer {
+  display: flex;
+  background: #ffffff;
+  height: 65px;
+  position: relative;
+  box-shadow: 0 0 10px 0 rgba(183, 192, 206, 0.2);
+  z-index: 3;
+  width: 100%;
+  bottom: 0;
+
+  .copyright,
+  a {
+    color: #3f4254 !important;
+
+    &:hover {
+      transition: color 0.2s ease;
+      color: #3699ff !important;
+    }
+  }
+}
+
+// Tablet & Mobile Modes
+@include media-breakpoint-down(sm) {
+  .footer {
+    > div {
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+  }
+}

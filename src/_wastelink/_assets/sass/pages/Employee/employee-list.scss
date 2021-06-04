@@ -1,0 +1,75 @@
+@import "../../init";
+@import "../common/table-content";
+
+.employeeList {
+  padding: 15px;
+  background: white;
+  box-shadow: 0 0 6px 0 rgba(183, 192, 206, 0.6);
+  display: flex;
+  flex-direction: column;
+
+  .empSummary {
+    margin-bottom: 0.8em;
+    ._tit {
+      color: #676e8a;
+      font-size: 0.85em;
+      margin-bottom: -4px !important;
+    }
+    ._val {
+      color: #110a57;
+      font-size: 1.05em;
+      font-weight: 500;
+      margin-left: 5px;
+      margin-right: 8px;
+    }
+  }
+
+  @include ant-table-custom;
+  @include ant-dropdown;
+
+  .ant-table-content {
+    font-size: 13px;
+    font-weight: 500;
+
+    .ant-table-tbody {
+      tr {
+        td {
+          // text-align: center;
+          &:nth-child(1) {
+            color: #f5b82c;
+            font-weight: 700;
+            cursor: pointer;
+          }
+          &:nth-child(2) {
+            color: #000;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+
+  .filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    // border-bottom: 1.5px solid #ddd;
+    // padding-bottom: 5px;
+  }
+}
+
+._empToolTip {
+  ._tit {
+    color: #676e8a;
+    font-size: 0.95em;
+    margin-bottom: -4px !important;
+  }
+  ._val {
+    color: #110a57;
+    font-size: 1.05em;
+    font-weight: 500;
+    margin-left: 5px;
+    margin-right: 8px;
+  }
+}

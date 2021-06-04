@@ -1,0 +1,47 @@
+@import "../../../init";
+
+@import "../../common/table-content";
+
+.ticketTable {
+  .ticket_id {
+    cursor: pointer;
+    &:hover {
+      border-bottom: 1.5px solid;
+    }
+  }
+
+  .export {
+    display: flex;
+    padding-bottom: 10px;
+
+    .exportBtn {
+      background-color: #35a630;
+      color: white;
+      border-color: #35a630 !important;
+      display: flex;
+      align-items: center;
+      width: 80px !important;
+      justify-content: center !important;
+
+      &:hover,
+      &:focus {
+        background-color: #5db859;
+        color: white;
+      }
+    }
+  }
+
+  @include ant-table-custom;
+}
+
+.invoice_submit {
+  display: none;
+}
+
+@include ant-dropdown;
+
+@include media-breakpoint-down(xs) {
+  .ticketTable {
+    @include media-down-xs-table;
+  }
+}

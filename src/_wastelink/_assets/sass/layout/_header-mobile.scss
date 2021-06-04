@@ -1,0 +1,71 @@
+//
+// Header Mobile
+//
+
+// Desktop Mode
+@include media-breakpoint-up(lg) {
+  .header-mobile {
+    display: none;
+  }
+}
+
+// Tablet & Mobile Modes
+@include media-breakpoint-down(md) {
+  .header-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 get($page-padding, tablet-and-mobile);
+    height: get($header-config, tablet-and-mobile, default, height);
+    min-height: get($header-config, tablet-and-mobile, default, height);
+    position: relative;
+    z-index: 3;
+
+    // Fixed Mobile Header Mode
+    .header-mobile-fixed & {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: get($header-config, tablet-and-mobile, fixed, zindex);
+      height: get($header-config, tablet-and-mobile, fixed, height);
+      min-height: get($header-config, tablet-and-mobile, fixed, height);
+    }
+
+    // Topbar Shown Mode
+    .topbar-mobile-on & {
+      box-shadow: none !important;
+    }
+
+    .header_left {
+      .page_title {
+        padding-left: 20px;
+        display: flex;
+        align-items: center;
+        font-size: 17px;
+        font-weight: 500;
+        color: white;
+
+        span::first-letter {
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+
+  .header__hamburger {
+    div {
+      width: 32px;
+      height: 4px;
+      background-color: white;
+      margin: 6px 0;
+      border-radius: 5px;
+    }
+    &:hover {
+      div {
+        transition: all 0.3s;
+        background-color: whitesmoke;
+      }
+    }
+  }
+}

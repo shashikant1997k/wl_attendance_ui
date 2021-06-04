@@ -1,0 +1,79 @@
+@import "../../init";
+
+.login-forgot {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+
+    .head {
+      margin-bottom: 3%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h2 {
+        color: #67666e;
+      }
+
+      p {
+        color: #b5b5c3 !important;
+        font-weight: 500 !important;
+      }
+    }
+
+    .alert_message {
+      height: 40px;
+      margin-bottom: 1%;
+    }
+
+    .ant-form {
+      width: 100%;
+      ._button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 0px;
+
+        button[type="submit"] {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .login-forgot {
+    .main {
+      padding-top: 5%;
+      padding-bottom: 5%;
+      width: 55%;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .login-forgot {
+    .main {
+      width: 70%;
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .login-forgot {
+    .main {
+      width: 90%;
+    }
+  }
+}

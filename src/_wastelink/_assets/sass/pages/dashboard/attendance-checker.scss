@@ -1,0 +1,147 @@
+@import "../common/button_style";
+.extryExitBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 15px;
+
+  .doneBtn {
+    background-color: #35a630;
+    color: white;
+    border-color: #35a630 !important;
+
+    &:hover,
+    &:focus {
+      background-color: #5db859;
+      color: white;
+    }
+  }
+
+  .cancelBtn {
+    background-color: #ffb229;
+    color: white;
+    border-color: #ffb229 !important;
+
+    &:hover,
+    &:focus {
+      background-color: #ffc926;
+      color: white;
+    }
+  }
+
+  button {
+    font-size: 2em;
+    width: 65px;
+    height: 65px;
+  }
+}
+
+.attendanceChecker {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background: white;
+  box-shadow: 0 0 6px 0 rgba(183, 192, 206, 0.6);
+  //   height: 100vh;
+
+  .cameraView {
+    width: 420px;
+    height: 420px;
+    // background-color: #ccc;
+
+    video {
+      margin-top: -30px;
+    }
+
+    .userInfo {
+      display: flex;
+      flex-direction: column;
+      padding: 5px 15px 15px 15px;
+      margin-top: 2em;
+      border: 1.4px solid #ddd;
+
+      .userImg {
+        padding-top: 10px;
+      }
+
+      .info {
+        display: flex;
+        flex-direction: row;
+        padding-top: 10px;
+        font-size: 1.2em;
+
+        ._title {
+          display: flex;
+          flex: 0.3;
+          font-size: 0.85em;
+          font-weight: 500;
+          color: #565656;
+        }
+        ._val {
+          display: flex;
+          flex: 0.7;
+          font-size: 1em;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .rightText {
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    padding-top: 30px;
+
+    .con1 {
+      display: flex;
+      flex-direction: column;
+
+      .styl {
+        padding-top: 15px;
+        font-size: 1.5em;
+        font-weight: 500;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .iconDiv {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-left: 15px;
+          svg {
+            width: 1.5em !important;
+            height: 1.5em !important;
+          }
+          .loading {
+            svg {
+              fill: #2684ff !important;
+            }
+          }
+
+          .rightTick {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg {
+              fill: #35a630 !important;
+            }
+          }
+          .wrongTick {
+            svg {
+              fill: red !important;
+            }
+          }
+        }
+      }
+
+      .QrcodeDiv {
+        .txt {
+          // opacity: 0.5;
+          //   background: #ccc;
+        }
+      }
+    }
+  }
+}

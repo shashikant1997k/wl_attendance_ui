@@ -1,0 +1,10 @@
+
+@mixin dropdown-multiselect {
+    .ant-select{
+        > .ant-select-selector{
+            display: flex;
+            flex-flow: row;
+            overflow: hidden;
+        }
+    }
+}

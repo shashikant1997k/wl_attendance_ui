@@ -1,0 +1,54 @@
+@import "../common/button_style";
+
+.employeeEdit {
+  width: 100%;
+  background: white;
+  padding: 15px;
+  box-shadow: 0 0 6px 0 rgba(183, 192, 206, 0.6);
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+
+    fieldset {
+      border: 1.5px solid #ccc !important;
+      height: max-content;
+      margin-bottom: 15px;
+
+      legend {
+        color: #000 !important;
+        border: none !important;
+        font-size: 1em;
+      }
+    }
+
+    .editButton {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+    }
+
+    .ant-picker {
+      width: 100%;
+    }
+
+    button {
+      @include done-button;
+    }
+    .imageUpload {
+      padding-left: 10px;
+      margin-bottom: 10px;
+      .tl {
+        font-weight: 500;
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+}

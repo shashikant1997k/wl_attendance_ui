@@ -1,0 +1,38 @@
+@import "./table-content";
+
+@mixin common-side-table {
+  background: white;
+  box-shadow: 0 0 10px 0 rgba(183, 192, 206, 0.2);
+  padding: 12px 12px 0px 12px !important;
+  margin-top: 10px;
+  margin-left: 25px !important;
+
+  h2 {
+    font-size: 1.2rem;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ddd;
+    color: #676f9ee6;
+  }
+
+  .main {
+    .ant-table-content {
+      font-size: 13px;
+      font-weight: 500;
+
+      @include table-horizonta-scroll;
+
+      table {
+        width: max-content !important;
+        min-width: 100% !important;
+      }
+      .ant-table-thead {
+        tr {
+          th {
+            background: #f2f3f8 !important;
+            border-bottom: 1px solid #f2f3f8 !important;
+          }
+        }
+      }
+    }
+  }
+}
