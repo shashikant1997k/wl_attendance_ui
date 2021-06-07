@@ -111,7 +111,6 @@ function Login(props) {
           layout="vertical"
           onFinish={formSubmit}
           onFinishFailed={formSubmitFailed}
-          initialValues={{ email: "anuj@gmail.com", password: "123456" }}
         >
           <div className="form-row">
             <Form.Item
