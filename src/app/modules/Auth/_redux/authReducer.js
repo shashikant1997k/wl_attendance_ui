@@ -1,3 +1,5 @@
+import baseURL from "../../../baseurl";
+
 let user = localStorage.getItem("user");
 let tkn = localStorage.getItem("accessToken");
 
@@ -24,7 +26,7 @@ const authReducer = (state = initialState, action) => {
     case actionTypes.LOGOUT:
       localStorage.clear();
       console.log(action);
-      fetch(`http://127.0.0.1:8000/api/userLogout/`, {
+      fetch(`${baseURL}/userLogout/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ accessToken: action.accessToken }),

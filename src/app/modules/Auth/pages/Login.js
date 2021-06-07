@@ -7,6 +7,7 @@ import { Alert } from "antd";
 import { GoogleOutlined } from "@ant-design/icons";
 import { useDispatch } from "react-redux";
 import { actionTypes } from "../_redux/authReducer";
+import baseURL from "../../../baseurl";
 
 function Login(props) {
   const [loading, setLoading] = useState(false);
@@ -25,7 +26,7 @@ function Login(props) {
   const formSubmit = (values) => {
     enableLoading();
 
-    fetch("http://127.0.0.1:8000/api/userLogin/", {
+    fetch(`${baseURL}/userLogin/`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email: values.email, password: values.password }),
@@ -40,13 +41,10 @@ function Login(props) {
         }
 
         if (data["code"] && data["code"][0] === "203") {
-          fetch(
-            `http://127.0.0.1:8000/api/userRegister/?email=${values.email}`,
-            {
-              method: "GET",
-              headers: { "Content-Type": "application/json" },
-            }
-          )
+          fetch(`${baseURL}/userRegister/?email=${values.email}`, {
+            method: "GET",
+            headers: { "Content-Type": "application/json" },
+          })
             .then((res) => res.json())
             .then((data) => {
               disableLoading();
